@@ -1,0 +1,24 @@
+{
+    "private": true,
+    "scripts": {
+        "git-push": "git add . \n git commit -m 'Complete with clean code the sketch artist website' \n git push origin master",
+        "lampp": "sudo /etc/init.d/apache2 stop && sudo /opt/lampp/lampp start",
+        "off-nginx": "sudo service nginx stop",
+        "dev": "concurrently \"vite\" \"php artisan serve\"",
+        "build": "vite build",
+        "clear": "concurrently \"php artisan cache:clear\" \"php artisan config:clear\" \"php artisan config:cache\" \"php artisan view:clear\" \"php artisan route:clear\" \"php artisan clear-compiled\""
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.2",
+        "alpinejs": "^3.4.2",
+        "autoprefixer": "^10.4.2",
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.7.2",
+        "postcss": "^8.4.6",
+        "tailwindcss": "^3.1.0",
+        "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "concurrently": "^8.2.1"
+    }
+}

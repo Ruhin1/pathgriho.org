@@ -1,0 +1,162 @@
+@extends('layouts.client.app')
+@section('page-title') || Image Gallery @endsection
+@section('contents')
+
+  <!-- Main Contents -->
+   <div class="h-20"></div>
+
+    <!-- Main part of article -->
+    <!-- Main Contents Area -->
+    <main>
+      <article class="w-full flex flex-col items-center justify-center">
+        <div class="container py-10">
+          <ul
+            id="images-list"
+            class="columns-1 sm:columns-2 w-full lg:columns-3"
+          >
+          
+            @foreach ($image_galleries as $image)
+              <li class="w-full p-2 relative group" data='@json($image)'>
+                <figure class="w-full h-full">
+                  <img
+                    src="{{ asset($image->image) }}"
+                    alt="{{ $image->title }}"
+                    class="w-full h-full"
+                  />
+                </figure>
+                <div
+                  class="absolute top-0 left-0 p-2 w-full duration-500 group-hover:h-full cursor-pointer"
+                >
+                  <div
+                    class="w-full bg-slate-100 group-hover:h-full duration-500 p-4 bg-opacity-50 text-white"
+                  >
+                    <h3 class="text-2xl font-semibold font-oswald text-secondary">
+                      {{ $image->title }}
+                    </h3>
+                  </div>
+                </div>
+              </li>
+            @endforeach
+          
+          </ul>
+        </div>
+      </article>
+
+      <article
+        class="hidden w-full min-h-screen items-center justify-center absolute top-14 left-0 bg-slate-900 bg-opacity-60 z-30"
+      >
+        <div
+          class="container flex flex-col items-center justify-center bg-transparent py-4 lg:py-10"
+        >
+          <div class="relative bg-slate-100 rounded-3xl lg:max-w-5xl">
+            <figure class="w-full relative flex items-center justify-center">
+              <img
+                src="/assets/images/banner-2.jpg"
+                alt="Show Full View"
+                class="w-full lg:w-auto lg:max-h-[70vh]"
+              />
+              <button
+                id="close-btn"
+                class="cursor-pointer absolute top-0 right-0 m-6 p-3 fill-slate-100 bg-red-500 rounded-full duration-500 hover:bg-primary hover:drop-shadow-primary rotate-45 hover:rotate-90"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 352 512"
+                  width="32"
+                  height="32"
+                >
+                  <path
+                    d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z"
+                  />
+                </svg>
+              </button>
+            </figure>
+            <div class="w-full p-4 sm:p-8">
+              <h1 
+              id="title"
+                class="text-xl sm:text-2xl font-semibold font-oswald text-primary tracking-wider pb-2"
+              >
+                There is title of image
+              </h1>
+              <div
+                id="description"
+                class="text-sm sm:text-md font-oswald text-justify bg-transparent resize-none outline-none focus:ring-0 w-full h-auto"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Architecto repellat eum cum qui magni explicabo voluptates
+                numquam dolor accusamus, provident delectus exercitationem,
+                eaque saepe neque aperiam iure maxime molestiae laboriosam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+                modi commodi quidem repudiandae vel aliquid reiciendis nisi
+                consectetur iusto. Odio animi enim magnam ab optio eius minima
+                impedit nobis fugit?
+              </div>
+            </div>
+
+            <!-- Blog poster and simple timer -->
+            <hr class="mb-2 w-full h-px bg-slate-300" />
+            <div
+              class="flex w-full items-center justify-between flex-col md:flex-row gap-3 px-4 sm:px-8 pb-2 sm:pb-6"
+            >
+              <!--
+                <div class="flex gap-3 items-start justify-start">
+                  <a href="#" class="text-primary fill-primary duration-300 hover:fill-primary hover:drop-shadow-primary italic">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="18" height="18">
+                      <path
+                        d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h274.9c-2.4-6.8-3.4-14-2.6-21.3l6.8-60.9 1.2-11.1 7.9-7.9 77.3-77.3c-24.5-27.7-60-45.5-99.9-45.5zm45.3 145.3l-6.8 61c-1.1 10.2 7.5 18.8 17.6 17.6l60.9-6.8 137.9-137.9-71.7-71.7-137.9 137.8zM633 268.9L595.1 231c-9.3-9.3-24.5-9.3-33.8 0l-37.8 37.8-4.1 4.1 71.8 71.7 41.8-41.8c9.3-9.4 9.3-24.5 0-33.9z"
+                      />
+                    </svg>
+                  </a>
+                  <p class="font-semibold font-mono text-sm tracking-wider italic text-primary capitalize">Jhon Doe</p>
+                </div>
+              -->
+              <div class="flex gap-3 items-end justify-end">
+                <a
+                  href="#"
+                  class="text-secondary fill-secondary duration-300 hover:fill-primary hover:drop-shadow-primary italic"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    width="16"
+                    height="16"
+                  >
+                    <path
+                      d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
+                    /></svg
+                ></a>
+                <p id="time" class="font-semibold font-mono text-sm tracking-wider italic text-slate-500"> 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <script>
+      const imagesList = document.querySelectorAll("#images-list li");
+      const closeBtn = document.getElementById("close-btn");
+
+      imagesList.forEach(function (imageList) {
+        imageList.addEventListener("click", function () {
+          const data = JSON.parse(imageList.getAttribute("data"));
+
+          console.log(data)
+
+          const modal = closeBtn.closest("article");
+          modal.querySelector("figure img").src = window.assetUrl + data.image;
+          modal.querySelector("#title").innerHTML = data.title;
+          modal.querySelector("#description").innerHTML = data.description;
+          modal.querySelector("#time").innerHTML = window.localTime(data.updated_at);
+          modal.classList.replace("hidden", "flex");
+
+          document.body.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+
+      closeBtn.addEventListener("click", function () {
+        const modal = closeBtn.closest("article");
+        modal.classList.replace("flex", "hidden");
+      });
+    </script>
+@endsection

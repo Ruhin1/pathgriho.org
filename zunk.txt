@@ -1,0 +1,37 @@
+
+$names = [
+    "title",
+    "home title",
+    "faq title",
+    "services title",
+    "about title",
+    "search title",
+    "basic title_five",
+    "facebook",
+    "youtube",
+    "whatsapp",
+    "twitter",
+    "linkedin",
+    "pinterest",
+    "map url",
+    "phone one",
+    "phone two",
+    "email",
+    "meta title",
+    "meta keyword",
+    "meta description",
+    "basic title_one",
+    "basic title_three",
+    "basic title_four"
+];
+
+$ca_names = [];
+
+foreach ($names as $name) {
+  $ca_names[] = ucwords($name);
+  // $ca_names[] = "['label'=> ".ucwords($name).", 'name'=> {$name}, 'type'=> 'text', 'placeholder'=> 'Write Slider...', 'value'=> null, 'options'=> null]";
+}
+
+// echo "\n";
+// echo json_encode($ca_names);
+// echo "\n";

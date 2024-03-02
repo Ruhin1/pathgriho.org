@@ -1,0 +1,16 @@
+{
+    "font awesome 5 brands": {
+        "normal": "font_awesome_5_brands_normal_77e3a01bb5222cfc12b5339eb0684eb6"
+    },
+    "font awesome 5 duotone": {
+        "900": "font_awesome_5_duotone_900_73c355261e2be1a0742fbbd00bb11e68"
+    },
+    "font awesome 5 pro": {
+        "300": "\/home\/vivomemb\/domains\/vivomembership.com\/public_html\/storage\/fonts\/font_awesome_5_pro_300_b866276a2f498d0f29db6849ce0681c4",
+        "normal": "\/home\/vivomemb\/domains\/vivomembership.com\/public_html\/storage\/fonts\/font_awesome_5_pro_normal_dd4ed63d6fb08dc64a98d19e64ae6582",
+        "900": "font_awesome_5_pro_900_11169e3040b3d602a01929f8a91e984e"
+    },
+    "summernote": {
+        "normal": "summernote_normal_c80ac5ec07c7cd77dd5ff54155a1daa6"
+    }
+}

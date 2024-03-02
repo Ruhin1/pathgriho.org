@@ -1,0 +1,31 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "git-push": "git add . && git commit -m 'auto pushing done' && git push origin staging",
+    "copy-to-host-destination": "cp -r '/media/syedamirali/Office Work/pathgriho/dist' '/media/syedamirali/Office Work/view/'",
+    "push-the-code-for-host": "cd '/media/syedamirali/Office Work/view' && git add . && git commit -m 'Push Github For Netlify View' && git push origin pathgriho-staging",
+    "live": "yarn copy-to-host-destination && yarn push-the-code-for-host",
+    "build-live": "yarn build && yarn live",
+    "build-live-dev": "yarn build-live && yarn dev"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "fs-extra": "^11.2.0",
+    "path": "^0.12.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "strip-ansi": "^7.1.0"
+  }
+}

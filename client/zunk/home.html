@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pathgriho</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,900&family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--- favicon-->
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Tailwind Css -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body class="font-poppins w-full">
+    <!-- Header Section -->
+    <header class="w-full">
+      <!-- Navigation/Navbar -->
+      <nav
+        class="fixed top-0 left-0 bg-slate-200 px-2.5 w-full text-slate-700 z-40"
+      >
+        <div class="container w-full flex items-center justify-between">
+          <!-- Logo Image -->
+          <figure>
+            <img
+              src="/assets/images/logo.png"
+              alt="Logo"
+              class="w-24 sm:w-32 h-20"
+            />
+          </figure>
+
+          <!-- Navigation List -->
+          <ul
+            id="top-navigation-list"
+            class="hidden 2xl:flex flex-col 2xl:flex-row gap-6 h-20 px-10 pb-10 pt-32 2xl:p-0 items-start 2xl:items-center 2xl:justify-center 2xl:bg-transparent 2xl:static 2xl:w-auto w-full bg-slate-100 absolute z-50 left-0 top-20 min-h-[70vh] 2xl:min-h-auto overflow-y-auto 2xl:!overflow-visible"
+          >
+            <li
+              class="group relative 2xl:h-full flex items-center justify-center sm:pt-0"
+            >
+              <a
+                class="font-medium capitalize text-lg font-oswald text-slate-600 group-hover:drop-shadow-primary group-hover:text-primary flex gap-1 items-center group-hover:items-end justify-center duration-500"
+                href="#"
+              >
+                <text>Home</text>
+              </a>
+            </li>
+            <!-- Focus -->
+            <li
+              class="group relative 2xl:h-full flex items-start gap-4 2xl:gap-0 2xl:items-center justify-center"
+            >
+              <a
+                class="font-medium capitalize text-lg font-oswald text-slate-600 group-hover:drop-shadow-primary group-hover:text-primary group-[.active-nav]:text-primary group-[.active-nav]:drop-shadow-primary flex gap-1 items-center group-hover:items-end justify-center duration-500"
+                href="#"
+              >
+                <text>Focus</text>
+                <span
+                  class="fill-slate-600 group-hover:fill-primary group-hover:drop-shadow-primary group-[.active-nav]:fill-primary group-[.active-nav]:drop-shadow-primary group-[.active-nav]:rotate-180 duration-500 group-hover:rotate-180"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"
+                    width="18"
+                    height="18"
+                  >
+                    <path
+                      d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"
+                    />
+                  </svg>
+                </span>
+              </a>
+
+              <ul
+                class="hidden group-[.active-nav]:block group-hover:block 2xl:absolute top-20 left-0 font-oswald bg-primary text-slate-200 text-sm font-medium"
+              >
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Portal Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Contact Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Ship Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >System Navigation</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Resume Menu</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- Focus -->
+
+            <li
+              class="group relative 2xl:h-full flex items-start gap-4 2xl:gap-0 2xl:items-center justify-center"
+            >
+              <a
+                class="font-medium capitalize text-lg font-oswald text-slate-600 group-hover:drop-shadow-primary group-hover:text-primary group-[.active-nav]:text-primary group-[.active-nav]:drop-shadow-primary flex gap-1 items-center group-hover:items-end justify-center duration-500"
+                href="#"
+              >
+                <text>Projects</text>
+                <span
+                  class="fill-slate-600 group-hover:fill-primary group-hover:drop-shadow-primary group-[.active-nav]:fill-primary group-[.active-nav]:drop-shadow-primary group-[.active-nav]:rotate-180 duration-500 group-hover:rotate-180"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"
+                    width="18"
+                    height="18"
+                  >
+                    <path
+                      d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"
+                    />
+                  </svg>
+                </span>
+              </a>
+
+              <ul
+                class="hidden group-[.active-nav]:block group-hover:block 2xl:absolute top-20 left-0 font-oswald bg-primary text-slate-200 text-sm font-medium"
+              >
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Portal Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Contact Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Ship Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >System Navigation</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Resume Menu</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              class="group relative 2xl:h-full flex items-start gap-4 2xl:gap-0 2xl:items-center justify-center"
+            >
+              <a
+                class="font-medium capitalize text-lg font-oswald text-slate-600 group-hover:drop-shadow-primary group-hover:text-primary group-[.active-nav]:text-primary group-[.active-nav]:drop-shadow-primary flex gap-1 items-center group-hover:items-end justify-center duration-500"
+                href="#"
+              >
+                <text>Causes</text>
+                <span
+                  class="fill-slate-600 group-hover:fill-primary group-hover:drop-shadow-primary group-[.active-nav]:fill-primary group-[.active-nav]:drop-shadow-primary group-[.active-nav]:rotate-180 duration-500 group-hover:rotate-180"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"
+                    width="18"
+                    height="18"
+                  >
+                    <path
+                      d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"
+                    />
+                  </svg>
+                </span>
+              </a>
+
+              <ul
+                class="hidden group-[.active-nav]:block group-hover:block 2xl:absolute top-20 left-0 font-oswald bg-primary text-slate-200 text-sm font-medium"
+              >
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Portal Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Contact Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Ship Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >System Navigation</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Resume Menu</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              class="group relative 2xl:h-full flex items-start gap-4 2xl:gap-0 2xl:items-center justify-center"
+            >
+              <a
+                class="font-medium capitalize text-lg font-oswald text-slate-600 group-hover:drop-shadow-primary group-hover:text-primary group-[.active-nav]:text-primary group-[.active-nav]:drop-shadow-primary flex gap-1 items-center group-hover:items-end justify-center duration-500"
+                href="#"
+              >
+                <text>Updates</text>
+                <span
+                  class="fill-slate-600 group-hover:fill-primary group-hover:drop-shadow-primary group-[.active-nav]:fill-primary group-[.active-nav]:drop-shadow-primary group-[.active-nav]:rotate-180 duration-500 group-hover:rotate-180"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"
+                    width="18"
+                    height="18"
+                  >
+                    <path
+                      d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"
+                    />
+                  </svg>
+                </span>
+              </a>
+
+              <ul
+                class="hidden group-[.active-nav]:block group-hover:block 2xl:absolute top-20 left-0 font-oswald bg-primary text-slate-200 text-sm font-medium"
+              >
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Portal Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Contact Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Ship Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >System Navigation</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Resume Menu</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              class="group relative 2xl:h-full flex items-start gap-4 2xl:gap-0 2xl:items-center justify-center"
+            >
+              <a
+                class="font-medium capitalize text-lg font-oswald text-slate-600 group-hover:drop-shadow-primary group-hover:text-primary group-[.active-nav]:text-primary group-[.active-nav]:drop-shadow-primary flex gap-1 items-center group-hover:items-end justify-center duration-500"
+                href="#"
+              >
+                <text>Social Working</text>
+                <span
+                  class="fill-slate-600 group-hover:fill-primary group-hover:drop-shadow-primary group-[.active-nav]:fill-primary group-[.active-nav]:drop-shadow-primary group-[.active-nav]:rotate-180 duration-500 group-hover:rotate-180"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"
+                    width="18"
+                    height="18"
+                  >
+                    <path
+                      d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"
+                    />
+                  </svg>
+                </span>
+              </a>
+
+              <ul
+                class="hidden group-[.active-nav]:block group-hover:block 2xl:absolute top-20 left-0 font-oswald bg-primary text-slate-200 text-sm font-medium"
+              >
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Portal Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Contact Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Ship Menu</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >System Navigation</a
+                  >
+                </li>
+                <li class="duration-300">
+                  <a
+                    href="#"
+                    class="h-full block text-nowrap px-6 py-3 duration-500 hover:bg-secondary hover:text-slate-100text-nowrap"
+                    >Resume Menu</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              class="group relative 2xl:h-full flex items-center justify-center"
+            >
+              <a
+                class="font-medium capitalize text-lg font-oswald text-slate-600 group-hover:drop-shadow-primary group-hover:text-primary flex gap-1 items-center group-hover:items-end justify-center duration-500"
+                href="#"
+              >
+                <text>About US</text>
+              </a>
+            </li>
+            <li
+              class="group relative 2xl:h-full flex items-center justify-center"
+            >
+              <a
+                class="font-medium capitalize text-lg font-oswald text-slate-600 group-hover:drop-shadow-primary group-hover:text-primary flex gap-1 items-center group-hover:items-end justify-center duration-500"
+                href="#"
+              >
+                <text>Donate</text>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Actions Button & Search Bar -->
+          <div class="flex gap-6 group 2xl:relative" id="active-search">
+            <button
+              role="button"
+              type="button"
+              class="fill-slate-700 duration-500 hover:fill-primary hover:drop-shadow-primary group-[.active-search]:fill-primary group-[.active-search]:drop-shadow-primary p-2 rounded text-center hidden 2xl:block"
+            >
+              <!-- Search Svg -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="26"
+                height="26"
+              >
+                <path
+                  d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"
+                />
+              </svg>
+            </button>
+
+            <form
+              class="search absolute 2xl:-left-10 2xl:top-14 mt-1 top-24 left-10 z-50 p-4 bg-primary hidden items-center justify-center gap-4 2xl:hidden group-[.active-search]:flex"
+            >
+              <input
+                type="search"
+                class="text-lg font-mono w-full text-secondary bg-slate-100 px-6 py-2 border-none outline-none focus:bg-slate-200 md:min-w-72"
+                placeholder="Search here... "
+              />
+              <button
+                role="button"
+                type="submit"
+                class="fill-slate-200 bg-secondary p-2 rounded shadow-primary-deep border-secondary border border-solid text-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="26"
+                  height="26"
+                >
+                  <path
+                    d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"
+                  />
+                </svg>
+              </button>
+            </form>
+
+            <button
+              class="px-7 pt-1.5 pb-2 text-md font-oswald bg-primary text-slate-200 text-center rounded-full capitalize"
+            >
+              <span class="hidden sm:block">sponsor as a child</span>
+              <span class="sm:hidden block fill-slate-100">
+                <!-- Umbrella svg -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 576 512"
+                >
+                  <path
+                    d="M575.7 280.8C547.1 144.5 437.3 62.6 320 49.9V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v17.9C138.3 62.6 29.5 144.5 .3 280.8c-2.2 10.1 8.5 21.3 18.7 11.4 52-55 107.7-52.4 158.6 37 5.3 9.5 14.9 8.6 19.7 0 20.2-35.4 44.9-73.2 90.7-73.2 58.5 0 88.2 68.8 90.7 73.2 4.8 8.6 14.4 9.5 19.7 0 51-89.5 107.1-91.4 158.6-37 10.3 10 20.9-1.3 18.7-11.4zM256 301.7V432c0 8.8-7.2 16-16 16-7.8 0-13.2-5.3-15.1-10.7-5.9-16.7-24.1-25.4-40.8-19.5-16.7 5.9-25.4 24.2-19.5 40.8 11.2 31.9 41.6 53.3 75.4 53.3 44.1 0 80-35.9 80-80V301.6c-9.1-7.9-19.8-13.6-32-13.6-12.3 .1-22.4 4.8-32 13.7z"
+                  /></svg
+              ></span>
+            </button>
+
+            <!-- Mobile Menu Icon -->
+            <button
+              id="mobile-menu-btn"
+              class="fill-slate-100 duration-500 bg-primary hover:drop-shadow-primary p-2 rounded text-center 2xl:hidden block"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 192 512"
+              >
+                <path
+                  d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Header Banner -->
+      <div class="carousel w-full mt-20">
+        <div class="owl-carousel">
+          <figure
+            class="before:content-[''] before:pt-[65%] lg:before:pt-[40%] before:block relative"
+          >
+            <img
+              src="/assets/images/main-banner.jpg"
+              alt="Middle Banner"
+              class="w-full rounded-md absolute inset-0 h-full object-cover"
+            />
+          </figure>
+          <figure
+            class="before:content-[''] before:pt-[65%] lg:before:pt-[40%] before:block relative"
+          >
+            <img
+              src="/assets/images/banner-1.jpg"
+              alt="Middle Banner"
+              class="w-full rounded-md absolute inset-0 h-full object-cover"
+            />
+          </figure>
+          <figure
+            class="before:content-[''] before:pt-[65%] lg:before:pt-[40%] before:block relative"
+          >
+            <img
+              src="/assets/images/banner-4.jpg"
+              alt="Middle Banner"
+              class="w-full rounded-md absolute inset-0 h-full object-cover"
+            />
+          </figure>
+          <figure
+            class="before:content-[''] before:pt-[65%] lg:before:pt-[40%] before:block relative"
+          >
+            <img
+              src="/assets/images/sponsor-3.jpg"
+              alt="Middle Banner"
+              class="w-full rounded-md absolute inset-0 h-full object-cover"
+            />
+          </figure>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Contents -->
+    <main class="w-full bg-slate-100 flex flex-col items-center justify-center">
+      <!-- First Image Container -->
+      <article
+        class="bg-[url('/assets/images/banner-bg.png')] bg-cover w-full pt-20 pb-80 relative z-10 -mt-16 bg-transparent"
+      >
+        <!-- Image Card Container for banner -->
+        <div class="container flex flex-wrap gap-[5%] w-full py-10">
+          <!-- Card 1 -->
+          <div
+            class="lg:w-30/100 w-full border border-solid border-slate-200 rounded-[50px]"
+          >
+            <figure
+              class="before:content-[''] before:pt-[65%] before:block relative"
+            >
+              <img
+                src="/assets/images/sponsor-1.webp"
+                alt="Middle Banner"
+                class="w-full rounded-md absolute inset-0 h-full object-cover"
+              />
+            </figure>
+
+            <div class="w-full bg-white p-4 text-justify font-oswald">
+              <h3 class="p-2 text-2xl font-semibold text-primary capitalize">
+                sponsor a child
+              </h3>
+              <p class="text-md text-justify tracking-wide p-2.5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                voluptatibus quaerat odio harum eveniet iusto soluta eos
+                quibusdam, id libero at.
+              </p>
+              <a
+                href="#"
+                class="w-full text-center pt-2.5 flex items-center justify-center"
+              >
+                <button
+                  class="font-bold text-xl capitalize text-slate-200 px-8 duration-500 hover:tracking-wide pt-2 pb-2.5 rounded-full bg-primary shadow-primary-deep"
+                >
+                  sponsor now
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="lg:w-30/100 w- w-full border border-solid border-slate-200 rounded-[50px]"
+          >
+            <figure
+              class="before:content-[''] before:pt-[65%] before:block relative"
+            >
+              <img
+                src="/assets/images/sponsor-2.webp"
+                alt="Middle Banner"
+                class="w-full rounded-md absolute inset-0 h-full object-cover"
+              />
+            </figure>
+
+            <div class="w-full bg-white p-4 text-justify font-oswald">
+              <h3 class="p-2 text-2xl font-semibold text-primary capitalize">
+                sponsor a child
+              </h3>
+              <p class="text-md text-justify tracking-wide p-2.5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                voluptatibus quaerat odio harum eveniet iusto soluta eos
+                quibusdam, id libero at.
+              </p>
+              <a
+                href="#"
+                class="w-full text-center pt-2.5 flex items-center justify-center"
+              >
+                <button
+                  class="font-bold text-xl capitalize text-slate-200 px-8 duration-500 hover:tracking-wide pt-2 pb-2.5 rounded-full bg-primary shadow-primary-deep"
+                >
+                  sponsor now
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="lg:w-30/100 w-full border border-solid border-slate-200 rounded-[50px]"
+          >
+            <figure
+              class="before:content-[''] before:pt-[65%] before:block relative"
+            >
+              <img
+                src="/assets/images/sponsor-3.jpg"
+                alt="Middle Banner"
+                class="w-full rounded-md absolute inset-0 h-full object-cover"
+              />
+            </figure>
+
+            <div class="w-full bg-white p-4 text-justify font-oswald">
+              <h3 class="p-2 text-2xl font-semibold text-primary capitalize">
+                sponsor a child
+              </h3>
+              <p class="text-md text-justify tracking-wide p-2.5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                voluptatibus quaerat odio harum eveniet iusto soluta eos
+                quibusdam, id libero at.
+              </p>
+              <a
+                href="#"
+                class="w-full text-center pt-2.5 flex items-center justify-center"
+              >
+                <button
+                  class="font-bold text-xl capitalize text-slate-200 px-8 duration-500 hover:tracking-wide pt-2 pb-2.5 rounded-full bg-primary shadow-primary-deep"
+                >
+                  sponsor now
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mission/Vision Block -->
+      <article
+        class="bg-[url('/assets/images/banner-1.jpg')] bg-cover w-full pt-20 pb-0 relative z-10 before:content-[''] before:top-0 before:left-0 before:z-10 before:w-full before:h-full before:bg-slate-900 before:absolute before:opacity-70"
+      >
+        <!-- Image Card Container for Mission/Vision banner -->
+        <div class="container relative z-20">
+          <div
+            class="absolute w-full flex flex-col lg:flex-row -top-80 left-0 border border-solid border-slate-200 shadow-xl rounded"
+          >
+            <figure
+              class="before:content-[''] before:pt-[100%] w-full before:block relative"
+            >
+              <img
+                src="/assets/images/man-1.jpg"
+                alt="Middle Banner"
+                class="w-full rounded-md absolute inset-0 h-full object-cover"
+              />
+            </figure>
+            <div
+              class="bg-slate-100 w-full flex items-center justify-center p-0 lg:p-10"
+            >
+              <div class="w-full bg-slate-100 p-4 text-justify font-oswald">
+                <h3 class="p-2 text-2xl font-semibold text-primary capitalize">
+                  sponsor a child
+                </h3>
+                <p
+                  class="py-4 lg:py-10 text-lg text-justify font-poppins font-medium tracking-wide p-2.5"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                  voluptatibus quaerat odio harum eveniet iusto soluta eos
+                  quibusdam, id libero at. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Tempora architecto quia neque
+                  esse alias aperiam possimus unde fugit asperiores, volutes
+                  odio, consequatur desert assumenda aspernatur debitis modi
+                  nulla, ipsam maxime. Possimus, saepe fugiat recusandae alias
+                  ex sapiente ipsam vel tempore itaque, nobis velit, impedit
+                  reiciendis. Eum, error dolores. Quidem deserunt numquam
+                  cupiditate unde placeat consequatur nostrum reprehenderit
+                  beatae expedita tempore. Veniam ipsam nemo, sapiente dolor
+                  doloribus optio dicta id, rem itaque illum error excepturi,
+                </p>
+                <a href="#" class="w-full text-center pt-2.5">
+                  <button
+                    class="font-bold text-xl capitalize text-slate-200 px-8 duration-500 hover:tracking-wide pt-2 pb-2.5 rounded-full bg-primary shadow-primary-deep"
+                  >
+                    sponsor now
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="container mt-[260%] xs:mt-[190%] sm:mt-[130%] md:mt-[110%] lg:mt-[60%] xl:mt-96 py-20 relative z-20"
+        >
+          <h1
+            class="text-2xl xs:text-4xl font-semibold font-oswald tracking-wider text-center text-primary"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+            sequi illum consequatur iusto quas, et perferendis maxime.
+          </h1>
+          <p
+            class="text-lg leading-6 py-6 text-center font-poppins text-slate-100"
+          >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
+            nulla quidem obcaecati quisquam. Corrupti, omnis quo quos cupiditate
+            illum eos suscipit perspiciatis velit ipsum, in laudantium
+            laboriosam nobis. Sunt, inventore?Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Sapiente, adipisci beatae amet
+            laudantium libero maxime illo molestias, facere, obcaecati cum quae?
+            Dolorum sit animi rerum labore quaerat officiis pariatur tenetur!
+          </p>
+          <h1
+            class="py-4 text-5xl sm:text-9xl font-bold font-oswald text-slate-100 text-center"
+          >
+            50,000
+          </h1>
+          <p
+            class="text-xl font-oswald font-semibold tracking-wider text-center text-slate-300"
+          >
+            Sitll now, Voulenteers in worldwide.
+          </p>
+          <a href="#" class="w-full text-center block pt-2.5 mt-10">
+            <button
+              class="font-medium font-oswald text-2xl capitalize text-slate-200 px-12 duration-500 hover:tracking-wide pt-4 pb-5 rounded-full bg-primary shadow-primary-deep"
+            >
+              konw more about ourself
+            </button>
+          </a>
+        </div>
+      </article>
+
+      <!-- wrapping image gallery -->
+      <article class="w-full flex flex-col xl:flex-row">
+        <div
+          class="w-full xl:w-20/100 bg-primary font-oswald p-6 flex flex-col items-center justify-center"
+        >
+          <h1 class="text-3xl capitalize font-semibold text-slate-100">
+            Who we are?
+          </h1>
+          <p
+            class="text-lg font-normal text-slate-200 tracking-wide leading-[1.78rem] text-justify max-h-60 py-2 overflow-hidden"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+            labore ipsum voluptas corporis debitis fugiat eligendi. Lorem ipsum
+            dolor sit amet consectetur, adipisicing elit. Eum odio ducimus sequi
+            magnam! Nemo, quaerat quibusdam! Aut nostrum numquam consequatur
+            deleniti maiores sit quis, laboriosam esse odit dolore quod
+            doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Esse facilis qui, nobis deserunt, cum illo architecto libero tempora
+            commodi vero fuga consequatur eum sed! Quidem distinctio voluptatem
+            vero ipsum nobis!inventore? Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Facilis nobis, quis voluptatibus laborum
+            consequuntur deserunt quod similique odit, nostrum voluptatum autem
+            enim placeat. Atque tempora fuga et error beatae placeat.
+          </p>
+          <a
+            href="#"
+            class="w-full text-center flex items-center justify-center"
+          >
+            <button
+              class="font-bold text-xl capitalize text-slate-200 px-8 duration-500 hover:tracking-wide pt-2 pb-2.5 rounded-full bg-secondary shadow-primary-deep"
+            >
+              sponsor now
+            </button>
+          </a>
+          <!-- </div> -->
+        </div>
+
+        <div class="w-full xl:w-80/100">
+          <div class="flex flex-wrap w-full items-center justify-center">
+            <div class="w-full sm:w-50/100 lg:w-25/100">
+              <figure
+                class="before:content-[''] before:pt-[100%] before:block relative"
+              >
+                <img
+                  src="/assets/images/banner-1.jpg"
+                  alt="Middle Banner"
+                  class="w-full absolute inset-0 h-full object-cover"
+                />
+              </figure>
+            </div>
+            <div class="w-full sm:w-50/100 lg:w-25/100">
+              <figure
+                class="before:content-[''] before:pt-[100%] before:block relative"
+              >
+                <img
+                  src="/assets/images/banner-2.jpg"
+                  alt="Middle Banner"
+                  class="w-full absolute inset-0 h-full object-cover"
+                />
+              </figure>
+            </div>
+            <div class="w-full sm:w-50/100 lg:w-25/100">
+              <figure
+                class="before:content-[''] before:pt-[100%] before:block relative"
+              >
+                <img
+                  src="/assets/images/banner-4.jpg"
+                  alt="Middle Banner"
+                  class="w-full absolute inset-0 h-full object-cover"
+                />
+              </figure>
+            </div>
+            <div class="w-full sm:w-50/100 lg:w-25/100">
+              <figure
+                class="before:content-[''] before:pt-[100%] before:block relative"
+              >
+                <img
+                  src="/assets/images/sponsor-3.jpg"
+                  alt="Middle Banner"
+                  class="w-full absolute inset-0 h-full object-cover"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Second Image card -->
+      <article class="w-full bg-slate-100 text-slate-700 pb-60">
+        <div class="container">
+          <div class="w-full py-8">
+            <h1
+              class="text-4xl font-oswald font-semibold text-center text-primary"
+            >
+              Give a Little. Change a Lot.
+            </h1>
+            <p class="text-3xl font-medium text-center leading-10 font-poppins">
+              Recent Causes
+            </p>
+          </div>
+
+          <!-- Image Card Container for Causes Section -->
+          <div class="flex flex-wrap gap-[5%] w-full py-10">
+            <!-- Card 1 -->
+            <div
+              class="sm:w-45/100 lg:w-30/100 w-full border border-solid border-slate-200 rounded-[50px] mb-2"
+            >
+              <div class="w-full bg-white p-4 text-justify font-oswald">
+                <h3
+                  class="p-2 text-3xl font-semibold text-primary capitalize text-center flex flex-col items-center justify-center"
+                >
+                  <p>sponsor a child</p>
+                  <p class="w-40 h-1 rounded-full my-4 bg-primary"></p>
+                </h3>
+                <p class="text-md text-justify tracking-wide p-2.5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                  voluptatibus quaerat odio harum eveniet iusto soluta eos
+                  quibusdam, id libero at.
+                </p>
+              </div>
+              <figure
+                class="before:content-[''] before:pt-[65%] before:block relative"
+              >
+                <img
+                  src="/assets/images/sponsor-1.webp"
+                  alt="Middle Banner"
+                  class="w-full rounded-md absolute inset-0 h-full object-cover"
+                />
+              </figure>
+
+              <div class="w-full bg-white pb-4 text-justify font-oswald">
+                <a
+                  href="#"
+                  class="w-full text-center pt-2.5 flex items-center justify-center"
+                >
+                  <button
+                    class="font-bold text-xl capitalize text-slate-200 px-8 duration-500 hover:tracking-wide pt-2 pb-2.5 rounded-full bg-primary shadow-primary-deep"
+                  >
+                    sponsor now
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="sm:w-45/100 lg:w-30/100 w-full border border-solid border-slate-200 rounded-[50px] mb-2"
+            >
+              <div class="w-full bg-white p-4 text-justify font-oswald">
+                <h3
+                  class="p-2 text-3xl font-semibold text-primary capitalize text-center flex flex-col items-center justify-center"
+                >
+                  <p>sponsor a child</p>
+                  <p class="w-40 h-1 rounded-full my-4 bg-primary"></p>
+                </h3>
+                <p class="text-md text-justify tracking-wide p-2.5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                  voluptatibus quaerat odio harum eveniet iusto soluta eos
+                  quibusdam, id libero at.
+                </p>
+              </div>
+              <figure
+                class="before:content-[''] before:pt-[65%] before:block relative"
+              >
+                <img
+                  src="/assets/images/sponsor-2.webp"
+                  alt="Middle Banner"
+                  class="w-full rounded-md absolute inset-0 h-full object-cover"
+                />
+              </figure>
+
+              <div class="w-full bg-white pb-4 text-justify font-oswald">
+                <a
+                  href="#"
+                  class="w-full text-center pt-2.5 flex items-center justify-center"
+                >
+                  <button
+                    class="font-bold text-xl capitalize text-slate-200 px-8 duration-500 hover:tracking-wide pt-2 pb-2.5 rounded-full bg-primary shadow-primary-deep"
+                  >
+                    sponsor now
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="sm:w-45/100 lg:w-30/100 w-full border border-solid border-slate-200 rounded-[50px] mb-2"
+            >
+              <div class="w-full bg-white p-4 text-justify font-oswald">
+                <h3
+                  class="p-2 text-3xl font-semibold text-primary capitalize text-center flex flex-col items-center justify-center"
+                >
+                  <p>sponsor a child</p>
+                  <p class="w-40 h-1 rounded-full my-4 bg-primary"></p>
+                </h3>
+                <p class="text-md text-justify tracking-wide p-2.5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                  voluptatibus quaerat odio harum eveniet iusto soluta eos
+                  quibusdam, id libero at.
+                </p>
+              </div>
+              <figure
+                class="before:content-[''] before:pt-[65%] before:block relative"
+              >
+                <img
+                  src="/assets/images/sponsor-3.jpg"
+                  alt="Middle Banner"
+                  class="w-full rounded-md absolute inset-0 h-full object-cover"
+                />
+              </figure>
+
+              <div class="w-full bg-white pb-4 text-justify font-oswald">
+                <a
+                  href="#"
+                  class="w-full text-center pt-2.5 flex items-center justify-center"
+                >
+                  <button
+                    class="font-bold text-xl capitalize text-slate-200 px-8 duration-500 hover:tracking-wide pt-2 pb-2.5 rounded-full bg-primary shadow-primary-deep"
+                  >
+                    sponsor now
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full bg-transparent pb-4 text-justify font-oswald">
+            <a
+              href="#"
+              class="w-full text-center pt-2.5 flex items-center justify-center"
+            >
+              <button
+                class="font-bold text-2xl capitalize text-slate-200 px-12 duration-500 hover:tracking-wide pt-3 pb-3.5 rounded-full bg-primary shadow-primary-deep"
+              >
+                sponsor now as a outside
+              </button>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Secondary Block -->
+      <article
+        class="bg-[url('/assets/images/banner-4.jpg')] bg-cover w-full pt-20 pb-28 relative z-10 before:content-[''] before:top-0 before:left-0 before:z-10 before:w-full before:h-full before:bg-slate-900 before:absolute before:opacity-70"
+      >
+        <!-- Image Card Container for Mission/Vision banner -->
+        <div class="container relative z-20">
+          <!-- Top border line -->
+          <div
+            class="absolute -top-80 z-10 w-full bg-transparent left-0 p-8 flex items-center justify-center"
+          >
+            <div
+              class="p-12 w-70/100 bg-transparent border-secondary border-solid border-[12px]"
+            ></div>
+          </div>
+          <!-- Bottom border line -->
+          <div
+            class="hidden 2xl:flex absolute -top-16 z-10 w-full bg-transparent left-0 p-8 items-center justify-center"
+          >
+            <div
+              class="p-12 w-70/100 bg-transparent border-slate-100 border-solid border-[12px]"
+            ></div>
+          </div>
+
+          <!-- Contents -->
+          <div
+            class="absolute z-20 w-full flex -top-60 left-0 border border-solid border-primary shadow-xl rounded bg-primary justify-center items-center flex-col"
+          >
+            <h1
+              class="text-5xl font-medium font-oswald text-slate-100 text-center px-6 py-12"
+            >
+              DO YOU WANT TO WORK FOR THE UNDERPRIVILEGED COMMUNITIES AND CHANGE
+              THEIR LIVES?
+            </h1>
+            <div class="pb-10">
+              <a
+                href="#"
+                class="text-center text-2xl font-bold font-oswald underline duration-500 hover:tracking-wider text-slate-100"
+                >Become a Voulenteer.</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="container mt-60 relative z-20">
+          <div
+            class="w-full flex flex-wrap items-center justify-center gap-8 sm:gap-20"
+          >
+            <div class="w-full sm:w-25/100">
+              <p
+                class="text-xl font-oswald font-semibold tracking-wider text-center text-slate-300"
+              >
+                Sitll now, Voulenteers in worldwide.
+              </p>
+
+              <h1
+                class="py-4 text-4xl font-bold font-oswald text-primary text-center"
+              >
+                50,000
+              </h1>
+            </div>
+            <div class="w-full sm:w-25/100">
+              <p
+                class="text-xl font-oswald font-semibold tracking-wider text-center text-slate-300"
+              >
+                Sitll now, Voulenteers in worldwide.
+              </p>
+
+              <h1
+                class="py-4 text-4xl font-bold font-oswald text-primary text-center"
+              >
+                1000
+              </h1>
+            </div>
+            <div class="w-full sm:w-25/100">
+              <p
+                class="text-xl font-oswald font-semibold tracking-wider text-center text-slate-300"
+              >
+                Sitll now, Voulenteers in worldwide.
+              </p>
+
+              <h1
+                class="py-4 text-4xl font-bold font-oswald text-primary text-center"
+              >
+                535+
+              </h1>
+            </div>
+          </div>
+          <a href="#" class="w-full text-center block pt-2.5 mt-20">
+            <button
+              class="font-medium font-oswald text-2xl capitalize text-slate-200 px-12 duration-500 hover:tracking-wide pt-4 pb-5 rounded-full bg-primary shadow-primary-deep"
+            >
+              konw more about ourself
+            </button>
+          </a>
+        </div>
+      </article>
+
+      <!-- Footer banner Image card -->
+      <article
+        class="bg-[url('/assets/images/banner-bg.png')] bg-cover w-full py-20 relative z-10 -mt-24 bg-transparent"
+      >
+        <!-- Image Card Container for Social working -->
+        <div class="container">
+          <div class="w-full mt-6 py-12">
+            <h1
+              class="text-4xl font-oswald font-semibold text-center text-primary"
+            >
+              Give a Little. Change a Lot.
+            </h1>
+            <p class="text-6xl font-bold text-center pt-4 font-oswald">
+              News & Articles
+            </p>
+          </div>
+
+          <!-- Image Card Container for Causes Section -->
+          <div class="flex flex-wrap gap-[3%] w-full py-10">
+            <!-- Card 1 -->
+            <div
+              class="lg:w-30/100 w-full border border-solid border-slate-200 rounded-[50px] pb-8"
+            >
+              <figure
+                class="before:content-[''] before:pt-[65%] before:block relative"
+              >
+                <img
+                  src="/assets/images/sponsor-1.webp"
+                  alt="Middle Banner"
+                  class="w-full rounded-md absolute inset-0 h-full object-cover"
+                />
+              </figure>
+
+              <div class="w-full bg-white pb-4 text-justify font-oswald">
+                <p class="text-lg text-justify font-bold tracking-wide p-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                  voluptatibus quaerat odio harum eveniet iusto soluta eos
+                  quibusdam, id libero at.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="lg:w-30/100 w-full border border-solid border-slate-200 rounded-[50px] pb-8"
+            >
+              <figure
+                class="before:content-[''] before:pt-[65%] before:block relative"
+              >
+                <img
+                  src="/assets/images/sponsor-2.webp"
+                  alt="Middle Banner"
+                  class="w-full rounded-md absolute inset-0 h-full object-cover"
+                />
+              </figure>
+
+              <div class="w-full bg-white pb-4 text-justify font-oswald">
+                <p class="text-lg text-justify font-bold tracking-wide p-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                  voluptatibus quaerat odio harum eveniet iusto soluta eos
+                  quibusdam, id libero at.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="lg:w-30/100 w-full border border-solid border-slate-200 rounded-[50px] pb-8"
+            >
+              <figure
+                class="before:content-[''] before:pt-[65%] before:block relative"
+              >
+                <img
+                  src="/assets/images/sponsor-3.jpg"
+                  alt="Middle Banner"
+                  class="w-full rounded-md absolute inset-0 h-full object-cover"
+                />
+              </figure>
+
+              <div class="w-full bg-white pb-4 text-justify font-oswald">
+                <p class="text-lg text-justify font-bold tracking-wide p-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                  voluptatibus quaerat odio harum eveniet iusto soluta eos
+                  quibusdam, id libero at.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="lg:w-30/100 w-full border border-solid border-slate-200 rounded-[50px] pb-8"
+            >
+              <figure
+                class="before:content-[''] before:pt-[65%] before:block relative"
+              >
+                <img
+                  src="/assets/images/sponsor-1.webp"
+                  alt="Middle Banner"
+                  class="w-full rounded-md absolute inset-0 h-full object-cover"
+                />
+              </figure>
+
+              <div class="w-full bg-white pb-4 text-justify font-oswald">
+                <p class="text-lg text-justify font-bold tracking-wide p-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                  voluptatibus quaerat odio harum eveniet iusto soluta eos
+                  quibusdam, id libero at.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="lg:w-30/100 w-full border border-solid border-slate-200 rounded-[50px] pb-8"
+            >
+              <figure
+                class="before:content-[''] before:pt-[65%] before:block relative"
+              >
+                <img
+                  src="/assets/images/sponsor-2.webp"
+                  alt="Middle Banner"
+                  class="w-full rounded-md absolute inset-0 h-full object-cover"
+                />
+              </figure>
+
+              <div class="w-full bg-white pb-4 text-justify font-oswald">
+                <p class="text-lg text-justify font-bold tracking-wide p-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                  voluptatibus quaerat odio harum eveniet iusto soluta eos
+                  quibusdam, id libero at.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div
+              class="lg:w-30/100 w-full border border-solid border-slate-200 rounded-[50px] pb-8"
+            >
+              <figure
+                class="before:content-[''] before:pt-[65%] before:block relative"
+              >
+                <img
+                  src="/assets/images/sponsor-3.jpg"
+                  alt="Middle Banner"
+                  class="w-full rounded-md absolute inset-0 h-full object-cover"
+                />
+              </figure>
+
+              <div class="w-full bg-white pb-4 text-justify font-oswald">
+                <p class="text-lg text-justify font-bold tracking-wide p-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  quis odio nobis harum iusto magnam tempora? Eligendi ipsa
+                  voluptatibus quaerat odio harum eveniet iusto soluta eos
+                  quibusdam, id libero at.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer Areas -->
+    <footer>
+      <!-- Secondary Block -->
+      <article
+        class="bg-[url('/assets/images/banner-1.jpg')] bg-cover w-full py-10 relative z-10 before:content-[''] before:top-0 before:left-0 before:z-10 before:w-full before:h-full before:bg-slate-900 before:absolute before:opacity-70"
+      >
+        <!-- Image Card Container for Mission/Vision banner -->
+
+        <div class="container relative z-20 pb-20">
+          <div class="w-full flex flex-wrap items-center justify-center gap-20">
+            <div class="bg-transparent w-full md:w-25/100">
+              <h1
+                class="text-4xl font-semibold font-oswald tracking-wider text-center text-primary"
+              >
+                Voulenteers in worldwide
+              </h1>
+              <p
+                class="py-6 text-xl font-semibold font-poppins tracking-wider text-center text-slate-300"
+              >
+                Sitll now, Voulenteers in worldwide. on the joing team.
+              </p>
+
+              <a href="#" class="w-full text-center block pt-2.5">
+                <button
+                  class="font-medium font-oswald text-2xl capitalize text-slate-200 px-12 duration-500 hover:tracking-wide pt-4 pb-5 rounded-full bg-primary shadow-primary-deep"
+                >
+                  Donate now
+                </button>
+              </a>
+            </div>
+            <div class="bg-transparent w-full md:w-25/100">
+              <h1
+                class="text-4xl font-semibold font-oswald tracking-wider text-center text-primary"
+              >
+                Voulenteers in worldwide
+              </h1>
+              <p
+                class="py-6 text-xl font-semibold font-poppins tracking-wider text-center text-slate-300"
+              >
+                Sitll now, Voulenteers in worldwide. on the joing team.
+              </p>
+
+              <a href="#" class="w-full text-center block pt-2.5">
+                <button
+                  class="font-medium font-oswald text-2xl capitalize text-slate-200 px-12 duration-500 hover:tracking-wide pt-4 pb-5 rounded-full bg-primary shadow-primary-deep"
+                >
+                  Donate now
+                </button>
+              </a>
+            </div>
+            <div class="bg-transparent w-full md:w-25/100">
+              <h1
+                class="text-4xl font-semibold font-oswald tracking-wider text-center text-primary"
+              >
+                Voulenteers in worldwide
+              </h1>
+              <p
+                class="py-6 text-xl font-semibold font-poppins tracking-wider text-center text-slate-300"
+              >
+                Sitll now, Voulenteers in worldwide. on the joing team.
+              </p>
+
+              <a href="#" class="w-full text-center block pt-2.5">
+                <button
+                  class="font-medium font-oswald text-2xl capitalize text-slate-200 px-12 duration-500 hover:tracking-wide pt-4 pb-5 rounded-full bg-primary shadow-primary-deep"
+                >
+                  Donate now
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer last -->
+        <div
+          class="w-full flex flex-col items-center justify-center bg-slate-200 text-secondary gap-4 md:gap-10 py-10 relative z-20"
+        >
+          <div
+            class="container flex flex-wrap gap-20 md:items-center md:justify-center"
+          >
+            <div class="py-2 w-full md:w-25/100">
+              <figure>
+                <img
+                  src="/assets/images/logo.png"
+                  alt="Footer Logo"
+                  class="h-40 w-80 rounded-full"
+                />
+              </figure>
+              <p>
+                JAAGO Foundation is a non-profit organization that empowers
+                underprivileged individuals and communities in Bangladesh
+                through education, youth development, women’s empowerment,
+                climate change, governance and poverty alleviation.
+              </p>
+            </div>
+            <div class="py-2 flex flex-col md:w-25/100">
+              <h1
+                class="text-3xl font-semibold text-start font-oswald pb-6 text-nowrap"
+              >
+                About Us
+              </h1>
+              <a
+                href="#"
+                class="text-xl font-poppins text-primary font-semibold underline duration-500 hover:text-secondary text-nowrap"
+                >Sponsor A Child</a
+              ><a
+                href="#"
+                class="text-xl font-poppins text-primary font-semibold underline duration-500 hover:text-secondary text-nowrap"
+                >General</a
+              ><a
+                href="#"
+                class="text-xl font-poppins text-primary font-semibold underline duration-500 hover:text-secondary text-nowrap"
+                >Donation</a
+              ><a
+                href="#"
+                class="text-xl font-poppins text-primary font-semibold underline duration-500 hover:text-secondary text-nowrap"
+                >Career</a
+              ><a
+                href="#"
+                class="text-xl font-poppins text-primary font-semibold underline duration-500 hover:text-secondary text-nowrap"
+                >News & Updates</a
+              ><a
+                href="#"
+                class="text-xl font-poppins text-primary font-semibold underline duration-500 hover:text-secondary text-nowrap"
+                >Contact Us</a
+              >
+            </div>
+
+            <div class="py-2 flex flex-col gap-4 md:w-25/100">
+              <h1 class="text-3xl font-semibold font-oswald pb-6 text-nowrap">
+                Contact Us
+              </h1>
+              <p class="font-poppins text-xl">
+                <strong class="text-primary">Address: </strong
+                ><span class="pl-1"
+                  >Pathgriho Foundation, Grihobasider Milonmela,
+                  Bangladesh.</span
+                >
+              </p>
+              <p class="font-poppins text-xl">
+                <strong class="text-primary">E-mail: </strong
+                ><span class="pl-1">example@gmail.com</span>
+              </p>
+              <p class="font-poppins text-xl">
+                <strong class="text-primary">Mobile: </strong
+                ><span class="pl-1">+880 17807500</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div
+            class="py-2 w-full flex flex-col sm:flex-row items-center justify-center gap-6 text-secondary fill-secondary"
+          >
+            <!-- Facebook -->
+            <div class="flex gap-6">
+              <a
+                href="#"
+                class="block p-2 bg-slate-300 rounded-full fill-blue-400 duration-500 hover:fill-blue-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="32"
+                  height="32"
+                >
+                  <path
+                    d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
+                  />
+                </svg>
+              </a>
+              <!-- Youtube -->
+              <a
+                href="#"
+                class="block p-2 bg-slate-300 rounded-full fill-red-400 duration-500 hover:fill-red-700"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 576 512"
+                  width="32"
+                  height="32"
+                >
+                  <path
+                    d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"
+                  /></svg
+              ></a>
+              <!-- Twitter -->
+              <a
+                href="#"
+                class="block p-2 bg-slate-300 rounded-full fill-primary duration-500 hover:fill-blue-900"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="32"
+                  height="32"
+                >
+                  <path
+                    d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"
+                  /></svg
+              ></a>
+            </div>
+            <div class="flex gap-6">
+              <!-- Instagram -->
+              <a
+                href="#"
+                class="block p-2 bg-slate-300 rounded-full fill-blue-400 duration-500 hover:fill-blue-700"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="32"
+                  height="32"
+                >
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  /></svg
+              ></a>
+              <!-- Slack -->
+              <a
+                href="#"
+                class="block p-2 bg-slate-300 rounded-full fill-emerald-400 duration-500 hover:fill-emerald-700"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="32"
+                  height="32"
+                >
+                  <path
+                    d="M94.1 315.1c0 25.9-21.2 47.1-47.1 47.1S0 341 0 315.1c0-25.9 21.2-47.1 47.1-47.1h47.1v47.1zm23.7 0c0-25.9 21.2-47.1 47.1-47.1s47.1 21.2 47.1 47.1v117.8c0 25.9-21.2 47.1-47.1 47.1s-47.1-21.2-47.1-47.1V315.1zm47.1-189c-25.9 0-47.1-21.2-47.1-47.1S139 32 164.9 32s47.1 21.2 47.1 47.1v47.1H164.9zm0 23.7c25.9 0 47.1 21.2 47.1 47.1s-21.2 47.1-47.1 47.1H47.1C21.2 244 0 222.8 0 196.9s21.2-47.1 47.1-47.1H164.9zm189 47.1c0-25.9 21.2-47.1 47.1-47.1 25.9 0 47.1 21.2 47.1 47.1s-21.2 47.1-47.1 47.1h-47.1V196.9zm-23.7 0c0 25.9-21.2 47.1-47.1 47.1-25.9 0-47.1-21.2-47.1-47.1V79.1c0-25.9 21.2-47.1 47.1-47.1 25.9 0 47.1 21.2 47.1 47.1V196.9zM283.1 385.9c25.9 0 47.1 21.2 47.1 47.1 0 25.9-21.2 47.1-47.1 47.1-25.9 0-47.1-21.2-47.1-47.1v-47.1h47.1zm0-23.7c-25.9 0-47.1-21.2-47.1-47.1 0-25.9 21.2-47.1 47.1-47.1h117.8c25.9 0 47.1 21.2 47.1 47.1 0 25.9-21.2 47.1-47.1 47.1H283.1z"
+                  /></svg
+              ></a>
+              <!-- Threads -->
+              <a
+                href="#"
+                class="block p-2 bg-slate-300 rounded-full fill-violet-400 duration-500 hover:fill-violet-700"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="32"
+                  height="32"
+                >
+                  <path
+                    d="M331.5 235.7c2.2 .9 4.2 1.9 6.3 2.8c29.2 14.1 50.6 35.2 61.8 61.4c15.7 36.5 17.2 95.8-30.3 143.2c-36.2 36.2-80.3 52.5-142.6 53h-.3c-70.2-.5-124.1-24.1-160.4-70.2c-32.3-41-48.9-98.1-49.5-169.6V256v-.2C17 184.3 33.6 127.2 65.9 86.2C102.2 40.1 156.2 16.5 226.4 16h.3c70.3 .5 124.9 24 162.3 69.9c18.4 22.7 32 50 40.6 81.7l-40.4 10.8c-7.1-25.8-17.8-47.8-32.2-65.4c-29.2-35.8-73-54.2-130.5-54.6c-57 .5-100.1 18.8-128.2 54.4C72.1 146.1 58.5 194.3 58 256c.5 61.7 14.1 109.9 40.3 143.3c28 35.6 71.2 53.9 128.2 54.4c51.4-.4 85.4-12.6 113.7-40.9c32.3-32.2 31.7-71.8 21.4-95.9c-6.1-14.2-17.1-26-31.9-34.9c-3.7 26.9-11.8 48.3-24.7 64.8c-17.1 21.8-41.4 33.6-72.7 35.3c-23.6 1.3-46.3-4.4-63.9-16c-20.8-13.8-33-34.8-34.3-59.3c-2.5-48.3 35.7-83 95.2-86.4c21.1-1.2 40.9-.3 59.2 2.8c-2.4-14.8-7.3-26.6-14.6-35.2c-10-11.7-25.6-17.7-46.2-17.8H227c-16.6 0-39 4.6-53.3 26.3l-34.4-23.6c19.2-29.1 50.3-45.1 87.8-45.1h.8c62.6 .4 99.9 39.5 103.7 107.7l-.2 .2zm-156 68.8c1.3 25.1 28.4 36.8 54.6 35.3c25.6-1.4 54.6-11.4 59.5-73.2c-13.2-2.9-27.8-4.4-43.4-4.4c-4.8 0-9.6 .1-14.4 .4c-42.9 2.4-57.2 23.2-56.2 41.8l-.1 .1z"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex w-full text-center font-oswald text-slate-200 text-xl pt-8 items-center justify-center relative z-20"
+        >
+          <span>@Copyright</span>
+          <span class="px-1 font-bold text-primary"
+            ><script>
+              document.write(new Date().getFullYear());
+            </script></span
+          >
+          <span>all right reserve by</span>
+          <a class="block px-1 font-bold text-primary">AT-LABS.</a>
+        </div>
+      </article>
+    </footer>
+
+    <!-- Custom Scripts hidden 2xl:flex -->
+    <script>
+      const activeSearch = document.getElementById("active-search");
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const activeForm = activeSearch.querySelector("form");
+      const searchBtn = activeSearch.querySelector('[type="button"]');
+      const listsMenu = document.getElementById("top-navigation-list");
+      const lists = listsMenu.querySelectorAll("li");
+
+      // control menubar from moble or small device
+      function MenubarControll() {
+        mobileMenuBtn.addEventListener("click", function () {
+          if (activeForm.classList.contains("hidden")) {
+            activeForm.classList.replace("hidden", "flex");
+          } else {
+            activeForm.classList.replace("flex", "hidden");
+          }
+          if (listsMenu.classList.contains("hidden")) {
+            listsMenu.classList.replace("hidden", "flex");
+          } else {
+            listsMenu.classList.replace("flex", "hidden");
+          }
+        });
+      }
+
+      // Navbar menu button controll function;
+      function NavigationControll() {
+        lists.forEach(function (list) {
+          list.addEventListener("click", function () {
+            if (!list.classList.contains("active-nav")) {
+              lists.forEach((list) => list.classList.remove("active-nav"));
+              list.classList.add("active-nav");
+            } else if (list.classList.contains("active-nav")) {
+              lists.forEach((list) => list.classList.remove("active-nav"));
+            }
+          });
+        });
+      }
+
+      // Search bar control
+      function SearchBarControll() {
+        searchBtn.addEventListener("click", function () {
+          activeSearch.classList.toggle("active-search");
+        });
+      }
+
+      NavigationControll();
+      SearchBarControll();
+      MenubarControll();
+    </script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"
+      integrity="sha512-4GsgvzFFry8SXj8c/VcCjjEZ+du9RZp/627AEQRVLatx6d60AUnUYXg0lGn538p44cgRs5E2GXq+8IOetJ+6ow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          margin: 20,
+          loop: true,
+          autoplay: true,
+          navigation: true,
+          autoplayTimeout: 2000,
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: false,
+            },
+            600: {
+              items: 1,
+              nav: false,
+            },
+            1000: {
+              items: 1,
+              nav: false,
+            },
+          },
+        });
+
+        $(".owl-nav").removeClass("disabled");
+        $(".owl-dots").removeClass("disabled");
+      });
+    </script>
+  </body>
+</html>

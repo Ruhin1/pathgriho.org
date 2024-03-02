@@ -1,0 +1,19 @@
+.about h2 {
+  border-left: 3px solid;
+  padding-left: 8px;
+}
+
+ul.mission-list {
+  margin-left: 30px;
+}
+
+ul.mission-list li {
+  list-style: auto;
+}
+
+/* @media (max-width: 768px){
+  .chart-card {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */

@@ -1,0 +1,32 @@
+<script>
+  $(document).ready(function () {
+    $("#main-header").removeClass("transparent-header dark-header");
+
+    $.ajaxSetup({
+      headers: {
+        "X-CSRF-TOKEN": "o2mFux0678WNXboBu1asAWAgujgUtkAOw0fQ11U0",
+      },
+    });
+
+    $("#contactform").submit(function (event) {
+      event.preventDefault();
+
+      $.ajax({
+        url: "https://technoparkbd.com/admin/user_contact",
+        method: "POST",
+        data: $(this).serialize(),
+        success: function (data) {
+          alert(data.message);
+          event.target.reset();
+        },
+        error: function (error) {
+          alert(
+            "There is an serious error occurred, Please try again." +
+              "Error: " +
+              error?.message
+          );
+        },
+      });
+    });
+  });
+</script>

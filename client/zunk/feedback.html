@@ -1,0 +1,242 @@
+<div>
+  <div class="fixed bottom-28 right-10 z-[999]">
+    <a
+      id="feedback-open-btn"
+      href="#"
+      class="bg-slate-300 px-3 pb-2.5 pt-3.5 block fill-slate-100 hover:fill-slate-100 rounded-full duration-500 hover:bg-secondary hover:shadow-primary-deep hover:scale-110"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 161 161"
+        fill="none"
+      >
+        <path
+          d="M0 113.5V16.5C2.4 5.3 12.3333 0.833333 17 0H145.5C155.9 2.8 159.833 12.1667 160.5 16.5L158.5 115.5C161 129 147.667 129.833 146 130H97L58 160H52.5C50.9 160.4 50.1667 158.5 50 157.5V130H15.5C4.7 128 0.666667 118.167 0 113.5Z"
+          fill="#0198DB"
+        />
+        <circle cx="60" cy="45" r="10" fill="white" />
+        <circle cx="100" cy="45" r="10" fill="white" />
+        <path
+          d="M104.5 73.0001C83.3 92.6001 63.3333 81.1667 56 73.0001C52.8 71.8001 49.6667 72.5001 48.5 73.0001C44.5 76.0001 46 76 45 77.5C44.2 78.7 44.6667 81.6667 45 83C75.8 113.4 105.167 95 116 82V78C115.2 75.2 113.333 73.5 112.5 73.0001C108.5 71.0001 105.5 72.1667 104.5 73.0001Z"
+          fill="white"
+          stroke="white"
+        />
+      </svg>
+    </a>
+  </div>
+
+  <div
+    id="feedback-container"
+    class="hidden fixed w-full min-h-screen items-center justify-center top-0 left-0 z-[999] bg-secondary/50"
+  >
+    <div class="bg-white p-10 relative">
+      <!-- Close Button -->
+      <button
+        id="feedback-close-btn"
+        class="absolute top-2 md:-top-4 right-2 md:-right-4 bg-red-500 p-2 fill-slate-100 rounded-full hover:bg-secondary duration-500 rotate-45 hover:rotate-90 shadow-[0px_2px_4px_0px_rgba(0,_0,_0,_0.12)]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+          width="18"
+          height="18"
+        >
+          <path
+            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+          />
+        </svg>
+      </button>
+
+      <!-- Feedback Emogi -->
+      <div
+        class="font-poppins pb-3 text-slate-700 text-xs tracking-wide text-center"
+      >
+        <p class="mb-1">
+          Feedback on
+          <span class="font-bold text-primary underline"
+            >Pathgriho Foundation</span
+          >
+        </p>
+        <p class="text-md font-light leading-7">
+          How would you rate your experience?
+        </p>
+        <p
+          class="hidden text-md text-center leading-8 text-red-500 font-medium border-t border-b border-dashed border-secondary/30 mt-2"
+          id="text-alert"
+        >
+          Succes
+        </p>
+      </div>
+
+      <hr class="w-full h-px bg-secondary/40 mb-6 mt-4" />
+
+      <div
+        id="feedback-emogi"
+        class="w-full px-4 pb-4 flex items-center justify-between group"
+      >
+        <!-- Angry -->
+        <script type="module">
+          import { feedbackData } from "./js/extends.js";
+
+          document.getElementById("feedback-emogi").innerHTML = feedbackData
+            .map(
+              (fd) => `
+                   <a
+                      href="${fd.href}" type="${fd.name}"
+                      class="block fill-secondary/80 hover:fill-primary group-[.active-${fd.name}]:fill-primary group-[.active-${fd.name}]:drop-shadow-primary hover:drop-shadow-primary duration-500 relative groupchild"
+                    >
+
+                    ${fd.icon}
+
+                      <span class="absolute -bottom-10 duration-500 font-oswald opacity-0 -z-10 group-[.active-${fd.name}]:z-10 group-[.active-${fd.name}]:-bottom-6 group-[.active-${fd.name}]:opacity-100 group-[child:hover]:z-10 group-[child:hover]:opacity-100 group-[child:hover]:-bottom-6 tracking-wide text-primary/80 font-light left-0.5 text-sm capitalize text-center">
+                        ${fd.name}
+                      </span>
+                    </a>`
+            )
+            .join("");
+        </script>
+      </div>
+
+      <!-- Input Feedback Text -->
+      <div class="w-full hidden" id="feedback-text">
+        <div class="py-6">
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            class="bg-slate-200 max-w-xl w-full rounded border border-solid border-secondary/30 max-h-40 resize-none outline-none focus:border-2 focus:border-secondary/60 text-lg px-4 py-3"
+            placeholder="Write here waht's on your mind."
+          ></textarea>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <div>
+            <p class="font-semibold text-sm text-secondary">
+              Heads up! This is for feedback only.
+            </p>
+            <p class="text-sm font-medium text-secondary">
+              Need help?
+              <a class="underline font-bold text-primary">Contact us</a>.
+            </p>
+          </div>
+          <div>
+            <button
+              class="bg-slate-500 text-slate-100 opacity-85 px-4 py-1 font-medium hover:bg-primary hover:drop-shadow-primary duration-500 hover:tracking-wide text-md uppercase rounded-md"
+            >
+              send
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input email -->
+      <div class="w-full pt-10 hidden" id="feedback-email">
+        <p class="text-md font-light text-center">
+          We may wish to follow up. <br />Enter your email if you're happy for
+          us to contact you.
+        </p>
+        <hr class="w-full h-px bg-secondary/40 my-6" />
+
+        <div class="w-full">
+          <label for="email" class="text-sm font-medium text-secondary"
+            >Type here your email:</label
+          >
+          <input
+            type="text"
+            class="bg-slate-200 max-w-xl w-full rounded border border-solid border-secondary/30 max-h-40 resize-none outline-none focus:border-2 focus:border-secondary/60 text-lg px-4 py-3"
+            placeholder="feedback@example.gmail.com"
+          />
+        </div>
+
+        <div class="w-full flex pt-6 items-center justify-end">
+          <button
+            class="bg-slate-500 text-slate-100 opacity-85 px-4 py-1 font-medium hover:bg-primary hover:drop-shadow-primary duration-500 hover:tracking-wide text-md uppercase rounded-md"
+          >
+            send
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script></script>
+// extends the feedback loader html // (async function () { // const response =
+await fetch("./feedback.html"); // const result = await response.text(); //
+console.log({ result }); // })();
+<script>
+  const feedbackEmogiContainer = document.getElementById("feedback-emogi");
+  const feedbackTextContainer = document.getElementById("feedback-text");
+  const feedbackEmailContainer = document.getElementById("feedback-email");
+  const feedbackAlert = document.getElementById("text-alert");
+  const feedbackCloseBtn = document.getElementById("feedback-close-btn");
+  const feedbackOpenBtn = document.getElementById("feedback-open-btn");
+  const feedbackContainer = document.getElementById("feedback-container");
+
+  // Wait for DOM contents Loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    let prevEmogiType = undefined;
+
+    feedbackEmogiContainer.querySelectorAll("a").forEach(function (emogi) {
+      emogi.addEventListener("click", function () {
+        const emogiType = emogi.getAttribute("type");
+        if (prevEmogiType) {
+          feedbackEmogiContainer.classList.replace(
+            `active-${prevEmogiType}`,
+            `active-${emogiType}`
+          );
+        } else {
+          feedbackEmogiContainer.classList.add(`active-${emogiType}`);
+        }
+
+        prevEmogiType = emogiType;
+
+        feedbackTextContainer.classList.replace("hidden", "block");
+
+        console.log({ emogiType });
+      });
+    });
+
+    feedbackTextContainer
+      .querySelector("button")
+      .addEventListener("click", function () {
+        if (feedbackTextContainer.querySelector("textarea").value !== "") {
+          feedbackAlert.classList.replace("block", "hidden");
+          feedbackAlert.textContent = "Thanks for write a feedback!";
+
+          feedbackEmailContainer.classList.replace("hidden", "block");
+        } else {
+          feedbackAlert.classList.replace("hidden", "block");
+          feedbackAlert.textContent =
+            "Please write something and send us a feedback!";
+        }
+      });
+
+    feedbackCloseBtn.addEventListener("click", function () {
+      feedbackContainer.classList.replace("flex", "hidden");
+    });
+
+    feedbackOpenBtn.addEventListener("click", function () {
+      feedbackContainer.classList.replace("hidden", "flex");
+    });
+
+    feedbackEmailContainer
+      .querySelector("button")
+      .addEventListener("click", function () {
+        if (feedbackEmailContainer.querySelector("input").value !== "") {
+          feedbackAlert.classList.replace("block", "hidden");
+          feedbackAlert.textContent = "Thanks for feedback!";
+
+          feedbackContainer.classList.replace("flex", "hidden");
+        } else {
+          feedbackContainer.classList.replace("hidden", "flex");
+          feedbackAlert.classList.replace("hidden", "block");
+          feedbackAlert.textContent =
+            "Please make sure the email is correct or required!";
+        }
+      });
+  });
+</script>
