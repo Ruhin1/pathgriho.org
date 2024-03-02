@@ -1,6 +1,6 @@
 # Organization website
 ### Made By [***Tonmoy Islam***](https://github.com/Ruhin1)
-This is a Organization website Project Made with Laravel, tailwind css, Bootstrap, JQuery, DataTables, Facebook api, google api.
+This is a Organization website Project Made with Laravel, tailwind css, Bootstrap, JQuery, DataTables,image intervention, Facebook api, google api.
 I put it up just to show off my skills, but if you're here it means I may have posted it somewhere online and you're here to steal it or look at it as a reference, but that's okay.
 > it looks decent enough and functionalities are also working... (obviously there will be some bugs)
 
